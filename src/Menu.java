@@ -5,6 +5,7 @@ public class Menu {
     private String choice;
     Scanner in = new Scanner(System.in);
     Pin pin = new Pin();
+    Contacts contacts = new Contacts();
 
     public void start()
     {
@@ -19,6 +20,7 @@ public class Menu {
             choice = in.next().toLowerCase();
             switch(choice){
                 case "kontakt":
+                    contacts.action();
                     break;
                 case "sms":
                     break;
