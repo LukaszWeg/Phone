@@ -11,7 +11,7 @@ public class Contacts {
     private boolean work = true;
     private String choice;
 
-    private List<Contact> contact = new ArrayList<>();
+    private static List<Contact> contact = new ArrayList<>();
     public String name;
     public String lName;
     public int number;

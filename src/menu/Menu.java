@@ -2,6 +2,7 @@ package menu;
 
 import contact.Contacts;
 import pin.Pin;
+import sms.Sms;
 
 import java.util.Scanner;
 
@@ -11,6 +12,7 @@ public class Menu {
     Scanner in = new Scanner(System.in);
     Pin pin = new Pin();
     Contacts contacts = new Contacts();
+    Sms sms = new Sms();
 
     public void start()
     {
@@ -28,6 +30,7 @@ public class Menu {
                     contacts.action();
                     break;
                 case "sms":
+                    sms.action();
                     break;
                 case "gra":
                     break;
