@@ -1,3 +1,5 @@
+package pin;
+
 import java.util.Scanner;
 
 public class Pin {

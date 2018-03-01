@@ -1,3 +1,5 @@
+package contact;
+
 import javafx.scene.Parent;
 
 public class Contact {

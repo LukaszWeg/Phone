@@ -1,3 +1,8 @@
+package menu;
+
+import contact.Contacts;
+import pin.Pin;
+
 import java.util.Scanner;
 
 public class Menu {

@@ -1,3 +1,7 @@
+package contact;
+
+import contact.Contact;
+
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -6,12 +10,19 @@ import java.util.Scanner;
 public class Contacts {
     private boolean work = true;
     private String choice;
+
     private List<Contact> contact = new ArrayList<>();
     public String name;
     public String lName;
     public int number;
-
     Scanner in = new Scanner(System.in);
+
+    public List<Contact> getContact() {
+        return contact;
+    }
+
+
+
     public void action() {
         while(work) {
             System.out.println("\nWybierz jedno: \"Dodaj\" \"Usun\" \"Przegladaj\" \"Powrot\"");
