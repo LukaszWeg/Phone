@@ -46,7 +46,6 @@ public class Games {
         nick = in.next();
         System.out.println("Liczby z zakresu od 0-20! pierwsza cyfra: ");
         gameRandom = (int) (Math.random()*20);
-        System.out.println(gameRandom);
         while (gamee) {
 
             if(health > 0) {
@@ -55,7 +54,6 @@ public class Games {
                     System.out.println("brawo trafiłeś! - Kolejna cyfra:");
                     score++;
                     gameRandom = (int) (Math.random()*20);
-                    System.out.println(gameRandom);
                 } else if (gamerShot > gameRandom) {
                     health--;
                     System.out.println("Liczba jest mniejsza zostało: " + health + " żyć");
