@@ -54,13 +54,13 @@ public class Contacts {
         lName = in.next();
         System.out.println("numer telefonu:");
 
-        try {
+       try {
             number = in.nextInt();
             contact.add(new Contact(name, lName, number));
-        }
-        catch (InputMismatchException e) {
-            System.out.println("Nie podano cyfr!");
-        }
+       }
+       catch (InputMismatchException e) {
+           System.out.println("Nie podano cyfr! lub numer jest zby długi");
+       }
 
     }
     

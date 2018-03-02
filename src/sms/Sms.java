@@ -12,13 +12,8 @@ public class Sms {
     private int check;
     private String message;
     Contacts contacts = new Contacts();
-    private static List<Sms> sms = new ArrayList<>();
+    private static List<SmsList> sms = new ArrayList<>();
     Scanner in = new Scanner(System.in);
-
-    public Sms(int who, String message) {
-        this.who = who;
-        this.message = message;
-    }
 
     public Sms(){};
 
@@ -58,7 +53,14 @@ public class Sms {
         System.out.println("Do kogo wysłać");
         contacts.showContact();
         who  = in.nextInt();
-        sms.add(new Sms(who,message));
+        if(who-1 >= contacts.getContact().size())
+        {
+            System.out.println("Nie ma takiej osoby");
+        }
+        else {
+            sms.add(new SmsList(who, message));
+            System.out.println("Wyslano");
+        }
     }
 
     public void showSms() {
@@ -66,14 +68,11 @@ public class Sms {
         contacts.showContact();
         check = in.nextInt();
 
-        for(Sms sm: sms)
+        for(SmsList sm: sms)
         {
-            if(check == sm.getWho())
-            System.out.println(sm.getMessage());
-            else
+            if(sm.getWho() == check)
             {
-                System.out.println("Brak");
-                break;
+                System.out.println(sm.getMessage());
             }
         }
 
