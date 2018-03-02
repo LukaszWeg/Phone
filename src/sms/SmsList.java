@@ -1,5 +1,5 @@
 package sms;
-
+//klasa ktora jest w liscie i poprzez nią tworzymy obiekt ktory posiada parametry do kogo jest wysylana wiadomosc i jaka ta wiadomosc jest
 public class SmsList {
     private int who;
     private String message;

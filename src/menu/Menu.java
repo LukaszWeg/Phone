@@ -6,22 +6,25 @@ import pin.Pin;
 import sms.Sms;
 
 import java.util.Scanner;
-
+//glowna klasa ktora jest odpowiedzialna za nawigacje po calym programie
 public class Menu {
-    private boolean work = true;
-    private String choice;
+    private boolean work = true; // pole odpowiedzialne za dzialanie switchu az do przerwania
+    private String choice; // pole odpowiedzialne za wybor osoby co do switcha
     Scanner in = new Scanner(System.in);
-    Pin pin = new Pin();
-    Contacts contacts = new Contacts();
-    Sms sms = new Sms();
-    Games games = new Games();
+    Pin pin = new Pin(); // tworzy obiekt klsay pin
+    Contacts contacts = new Contacts(); //tworzy obiek klasy kontakt
+    Sms sms = new Sms(); //tworzy obiekt klasy sms
+    Games games = new Games(); //tworzy obiekt klasy game
 
+    //metoda odpowiedizalna za sprawdzenie czy checkPin zwraca true a jezeli tak to wyswietli menu
     public void start()
     {
         if(pin.checkPin() == true){
             showMenu();
         }
     }
+
+    //metoda odpowiedzialna za wyswietlenie menu
     public void showMenu()
     {
         while(work) {

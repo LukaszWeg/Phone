@@ -1,5 +1,5 @@
 package game;
-
+//klasa game ktora odpowiada za tworzenie obekitu gry gdzie zapisujemy wynik i nick osoby grajacej w liscie
 public class Game {
     private String nick;
     private int score;

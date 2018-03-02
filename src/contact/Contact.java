@@ -1,7 +1,6 @@
 package contact;
 
-import javafx.scene.Parent;
-
+//klasa contact która odpowiada za tworzenie obiektów które następnie będą zapisane do listy kontaktów
 public class Contact {
     private String firstName;
     private String lastName;

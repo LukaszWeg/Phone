@@ -6,17 +6,18 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Games {
-    private boolean  work = true;
-    private boolean gamee;
-    private String choice;
-    private String nick;
-    private int gameRandom;
-    private int gamerShot;
-    private int health;
-    private int score;
-    List<Game> game = new ArrayList<>();
+    private boolean  work = true; // pole odpowiedzialne za dzialanie switch dopoki go nie wylaczymy
+    private boolean gamee; // pole odpowiedzialne za dzialanie gry dopoki nie przegramy
+    private String choice; // pole odpowiedzialne za nasz wybor w switchu
+    private String nick; // nick osoby grajacej
+    private int gameRandom; // pole ktore zapisuje jakas wartosc od 0 do 20
+    private int gamerShot; // pole ktore zapisuje  wybor gracza co do liczby
+    private int health; // zycia ktore ma gracz
+    private int score; // wynik gracza
+    List<Game> game = new ArrayList<>(); // lista ktora zapisuje wynik i nick gracza
     Scanner in = new Scanner(System.in);
 
+ //metoda ktrora tworzy switcha
     public void action() {
         while(work) {
             System.out.println("\nWybierz jedno: \"Nowa\" \"wyniki\" \"Powrot\"");
@@ -38,7 +39,7 @@ public class Games {
         }
         work = true;
     }
-
+//wlasciwie cala metoda ktora reprezentuje gre
     public void newGame() {
         gamee = true;
         health = 10;
@@ -73,6 +74,8 @@ public class Games {
         }
 
     }
+
+    //wyswietla liste wynikow z gier graczy
     public void topList(){
         for(Game gam: game)
         {

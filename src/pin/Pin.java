@@ -3,15 +3,15 @@ package pin;
 import java.util.Scanner;
 
 public class Pin {
-    private static final short pin = 1234;
-    private short userPin;
-    private static short attempt = 3;
+    private static final short pin = 1234; //nasz pin
+    private short userPin; // pin ktory wybral uzytkownik
+    private static short attempt = 3; // liczba prob
     Scanner in = new Scanner(System.in);
 
     public static short getPin() {
         return pin;
     }
-
+// metoda ktora sprawdza czy podane haslo jest takie same jak wymagane i jezeli tak zwraca true
     public boolean checkPin() {
         System.out.println("Podaj PIN:");
         while (true) {
