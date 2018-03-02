@@ -1,6 +1,7 @@
 package menu;
 
 import contact.Contacts;
+import game.Games;
 import pin.Pin;
 import sms.Sms;
 
@@ -13,6 +14,7 @@ public class Menu {
     Pin pin = new Pin();
     Contacts contacts = new Contacts();
     Sms sms = new Sms();
+    Games games = new Games();
 
     public void start()
     {
@@ -33,6 +35,7 @@ public class Menu {
                     sms.action();
                     break;
                 case "gra":
+                    games.action();
                     break;
                 case "exit":
                     work = false;
